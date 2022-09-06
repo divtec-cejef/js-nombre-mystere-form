@@ -57,8 +57,8 @@
         const reponse = parseInt(txtNombre.value);
 
         // Si l'utilisateur n'a pas entré un nombre valide
-        if (isNaN(reponse)) {
-            alert('Entrez un nombre valide !');
+        if (isNaN(reponse) || reponse <= NB_MIN || reponse >= NB_MAX) {
+            alert(`Entrez un nombre valide entre ${NB_MIN} et ${NB_MAX} !`);
             // Vide le champ du formulaire
             txtNombre.value = '';
             // Donne le focus au champ du formulaire
