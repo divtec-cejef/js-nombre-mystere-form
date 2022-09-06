@@ -43,6 +43,11 @@ main {
 }
 
 /* Formulaires */
+label {
+    display: block;
+    margin-bottom: 1em;
+}
+
 input {
     font-family: inherit;
     font-size: inherit;
