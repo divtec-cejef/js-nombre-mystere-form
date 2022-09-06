@@ -8,26 +8,21 @@
 //Main IIFE (Immediately-Invoked Function Expression, se prononce "iffy")
 (function main() {
     'use strict';
-
-    /**
-     * Retourne un nombre entier aléatoire compris entre min et max
-     * @param min
-     * @param max
-     * @returns {number}
-     */
-      // Constantes d'application
-    const NB_MIN = 1;
-    const NB_MAX = 100;
-
+    // TODO afficher les messages d'erreur en HTML et pas avec alert
+    // TODO panneau de config pour modifer MIN et MAX
     /**
      * Fonction qui retourne un nombre aléatoire compris entre min et max
-     * @param min
-     * @param max
+     * @param {number} min
+     * @param {number} max
      * @returns {number}
      */
     function tireNombre(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
+
+    // Constantes d'application
+    const NB_MIN = 1;
+    const NB_MAX = 100;
 
     // Récupération des éléments HTML à manipuler
     const strongNbMax = document.getElementById('nbMax');
@@ -76,7 +71,7 @@
             ulHistorique.innerHTML += `<li>C'est plus que <strong>${reponse}</strong> !</li>`;
         } else {
             ulHistorique.innerHTML +=
-              `<li class="succes">
+                `<li class="succes">
                     <div>C'est bien <strong>${reponse} !</strong></div>
                     <div>
                         Bravo, tu as gagné en 
